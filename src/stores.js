@@ -1,6 +1,6 @@
-import { writable } from 'svelte/store';
+import { writable, derived } from 'svelte/store';
 
-export const jobListingStore = writable([
+export const jobListings = writable([
     {
         "id": 1,
         "company": "Photosnap",
@@ -152,3 +152,27 @@ export const jobListingStore = writable([
         "tools": ["React", "Sass"]
     }
 ]);
+
+export const userFilters = writable([]);
+
+// let dataWithFilterTerms = data.map(job => {
+// 	return {...job, filterTerms: [job.role, job.level, ...job.languages, ...job.tools]}
+// });
+
+export const filteredJobListings = derived(
+    [userFilters, jobListings],
+    ([$userFilters, $jobListings]) => {
+        let filteredData = [];
+        $jobListings.forEach(job => {
+            let listingFilterTerms = [job.role, job.level, ...job.languages, ...job.tools];
+            if (listingFilterTerms.some(term => $userFilters.includes(term))) {
+                filteredData.push(job);
+            }
+        });
+        return filteredData;
+    }
+)
+
+// let dataWithFilterTerms = $jobListings.map(job => {
+//     return {...job, filterTerms: [job.role, job.level, ...job.languages, ...job.tools]}
+// });

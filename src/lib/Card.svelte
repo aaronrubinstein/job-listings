@@ -45,7 +45,7 @@
     </div>
     <div class="filter-chips">
         {#each filterChipValues as filterChipValue}
-            <FilterChip>{filterChipValue}</FilterChip>
+            <FilterChip value={filterChipValue}/>
         {/each}
     </div>
 </div>

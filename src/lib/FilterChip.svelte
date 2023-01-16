@@ -1,12 +1,23 @@
-<div class="chip">
-    <slot></slot>
-</div>
+<script>
+    import { userFilters } from '../stores.js';
+    export let value;
+    
+    function addFilter(e) {
+        if ($userFilters.includes(e.target.value)) {return}
+        userFilters.update(filters => [...filters, e.target.value]);
+    }
+</script>
+
+<button class="chip" type="button" {value} on:click={addFilter}>
+    {value}
+</button>
 
 <style>
     .chip {
         height: 32px;
         background: hsla(180, 29%, 50%, 0.1);
         border-radius: 4px;
+        border: none;
         padding: 0 9px;
         padding-top: 3px;
         font-size: 16px;

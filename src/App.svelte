@@ -1,14 +1,20 @@
 <script>
-  	import { jobListingStore } from './stores.js';
+  	import { jobListings, userFilters, filteredJobListings } from './stores.js';
   	import Card from './lib/Card.svelte';
+	import FilterControls from './lib/FilterControls.svelte';
 </script>
 
 <header/>
 
 <main>
-	{#each $jobListingStore as jobListing}
-    	<Card {...jobListing}/>
-  	{/each}
+	<div class="container">
+		{#if $userFilters.length > 0}
+			<FilterControls/>
+		{/if}
+		{#each $jobListings as job}
+			<Card {...job}/>
+		{/each}
+	</div>
 </main>
 
 <style>
@@ -21,11 +27,18 @@
 
   	main {
 		width: 100%;
-		max-width: 1190px;
+		padding: 0 40px;
+		display: flex;
+		justify-content: center;
+	}
+
+	.container {
+		width: 100%;
+		max-width: 1110px;
 		display: flex;
 		flex-direction: column;
 		gap: 24px;
 		margin: 76px 0;
-		padding: 0 40px;
+		position: relative;
   	}
 </style>
