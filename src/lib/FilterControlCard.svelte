@@ -8,27 +8,31 @@
 </script>
 
 <div class="card">
-    {#each $userFilters as filter}
-        <FilterControl value={filter}/>
-    {/each}
+    <div class="filters">
+        {#each $userFilters as filter}
+            <FilterControl value={filter}/>
+        {/each}
+    </div>
     <button type="button" on:click={clearFilters}>Clear</button>
 </div>
 
 <style>
     .card {
-        height: 72px;
+        min-height: 72px;
         width: 100%;
         border-radius: 5px;
         background: #FFF;
-        padding: 0 40px;
+        padding: 20px 40px;
         box-shadow: 0px 15px 20px -5px hsla(189, 81%, 28%, 0.15);
         display: flex; 
         align-items: center;
-        position: absolute;
-        top: -112px;
+    }
+
+    .filters {
         display: flex;
-        align-items: center;
-        column-gap: 16px;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-right: 40px;
     }
 
     button {
@@ -37,13 +41,13 @@
         line-height: 24px;
         letter-spacing: -0.12px;
         margin-left: auto;
-        color: #5CA5A5;
+        color: #7C8F8F;
         background: none;
         border: none;
         cursor: pointer;
     }
     
     button:hover {
-        color: #2B3939;
+        color: #5CA5A5;
     }
 </style>

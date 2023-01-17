@@ -67,10 +67,11 @@
     }
 
     .job-details {
-        margin-left: 24px;
+        margin: 0 24px;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        min-width: 265px;
     }
     
     .top-row {
@@ -125,8 +126,10 @@
 
     .filter-chips {
         display: flex;
+        justify-content: flex-end;
         align-items: center;
-        column-gap: 16px;
+        gap: 16px;
+        flex-wrap: wrap;
         margin-left: auto;
     }
 </style>

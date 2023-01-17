@@ -5,18 +5,23 @@
 </script>
 
 <header/>
-
 <main>
-	<div class="container">
+	<div class="main-container">
 		{#if $userFilters.length > 0}
-			<FilterControlCard/>
-			{#each $filteredJobListings as job (job.id)}
-				<JobCard {...job}/>
-			{/each}
+			<div class="filter-container">
+				<FilterControlCard/>
+			</div>
+			<div class="job-listing-container">
+				{#each $filteredJobListings as job (job.id)}
+					<JobCard {...job}/>
+				{/each}
+			</div>
 		{:else}
-			{#each $jobListings as job (job.id)}
-				<JobCard {...job}/>
-			{/each}
+			<div class="job-listing-container" style="margin-top: 232px;">
+				{#each $jobListings as job (job.id)}
+					<JobCard {...job}/>
+				{/each}
+			</div>
 		{/if}
 	</div>
 </main>
@@ -27,6 +32,7 @@
 		height: 156px;
 		background-color: #5CA5A5;
 		background-image: url(/images/bg-header-desktop.svg);
+		position: absolute;
   	}
 
   	main {
@@ -36,13 +42,26 @@
 		justify-content: center;
 	}
 
-	.container {
+	.main-container {
 		width: 100%;
 		max-width: 1110px;
 		display: flex;
 		flex-direction: column;
+	}
+
+	.filter-container {
+		width: 100%;
+		max-width: 1110px;
+		margin-top: 120px;
+		margin-bottom: 40px;
+		position: relative;
+	}
+
+	.job-listing-container {
+		display: flex;
+		flex-direction: column;
 		gap: 24px;
-		margin: 76px 0;
+		margin-bottom: 76px;
 		position: relative;
   	}
 </style>
