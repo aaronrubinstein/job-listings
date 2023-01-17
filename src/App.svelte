@@ -1,7 +1,7 @@
 <script>
   	import { jobListings, userFilters, filteredJobListings } from './stores.js';
-  	import Card from './lib/Card.svelte';
-	import FilterControls from './lib/FilterControls.svelte';
+  	import JobCard from './lib/JobCard.svelte';
+	import FilterControlCard from './lib/FilterControlCard.svelte';
 </script>
 
 <header/>
@@ -9,11 +9,15 @@
 <main>
 	<div class="container">
 		{#if $userFilters.length > 0}
-			<FilterControls/>
+			<FilterControlCard/>
+			{#each $filteredJobListings as job (job.id)}
+				<JobCard {...job}/>
+			{/each}
+		{:else}
+			{#each $jobListings as job (job.id)}
+				<JobCard {...job}/>
+			{/each}
 		{/if}
-		{#each $jobListings as job}
-			<Card {...job}/>
-		{/each}
 	</div>
 </main>
 

@@ -1,6 +1,6 @@
 <script>
-    import Pill from '../lib/Pill.svelte';
-    import FilterChip from '../lib/FilterChip.svelte';
+    import Pill from './Pill.svelte';
+    import FilterChip from './FilterChip.svelte';
 
     export let id;
     export let company;
@@ -99,6 +99,7 @@
         color: #2B3939;
         margin-top: 10px;
         margin-bottom: 7px;
+        cursor: pointer;
     }
 
     .position:hover {
