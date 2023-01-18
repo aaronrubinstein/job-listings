@@ -10,18 +10,20 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 - Filter job listings based on the categories
 
-### Screenshot
-
-**Desktop**
-<img src="./solution/desktop.jpg" width=50% height=50%>
-
-**Mobile**
-<img src="./solution/movile.jpg" width=50% height=50%>
-
 ### Links
 
 - Solution URL: https://github.com/aaronrubinstein/job-listings
 - Live Site URL: https://aaronrubinstein.github.io/job-listings/
+
+### Screenshots
+
+**Desktop**
+
+<img src="./solution/desktop.jpg" width=70% height=70%>
+
+**Mobile**
+
+<img src="./solution/mobile.jpg" width=30% height=30%>
 
 ### Built with
 
