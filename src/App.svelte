@@ -17,7 +17,7 @@
 				{/each}
 			</div>
 		{:else}
-			<div class="job-listing-container" style="margin-top: 232px;">
+			<div class="job-listing-container filter-off">
 				{#each $jobListings as job (job.id)}
 					<JobCard {...job}/>
 				{/each}
@@ -53,15 +53,34 @@
 		width: 100%;
 		max-width: 1110px;
 		margin-top: 120px;
-		margin-bottom: 40px;
+		margin-bottom: 56px;
 		position: relative;
 	}
 
 	.job-listing-container {
 		display: flex;
 		flex-direction: column;
-		gap: 24px;
+		gap: 40px;
 		margin-bottom: 76px;
 		position: relative;
   	}
+
+	.filter-off {
+		margin-top: 232px;
+	}
+
+	@media (max-width: 780px) {
+		header {
+			background-image: url(/images/bg-header-mobile.svg);
+		}
+		
+		main {
+			padding: 0 24px;
+		}
+
+		.filter-off {
+			margin-top: 212px;
+		}
+	}
+
 </style>

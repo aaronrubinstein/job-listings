@@ -13,7 +13,7 @@
             <FilterControl value={filter}/>
         {/each}
     </div>
-    <button type="button" on:click={clearFilters}>Clear</button>
+    <button class="clear-button" type="button" on:click={clearFilters}>Clear</button>
 </div>
 
 <style>
@@ -35,7 +35,7 @@
         margin-right: 40px;
     }
 
-    button {
+    .clear-button {
         font-size: 16px;
         font-weight: 700;
         line-height: 24px;
@@ -45,9 +45,20 @@
         background: none;
         border: none;
         cursor: pointer;
+        padding: 0;
     }
     
-    button:hover {
+    .clear-button:hover {
         color: #5CA5A5;
+    }
+
+    @media (max-width: 780px) {
+        .card {
+            padding: 20px 25px 20px 20px;
+        }
+
+        .filters {
+            margin-right: 20px;
+        }
     }
 </style>

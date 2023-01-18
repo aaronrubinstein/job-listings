@@ -71,13 +71,14 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        min-width: 265px;
+        min-width: 281px;
     }
     
     .top-row {
         display: flex;
         align-items: center;
         column-gap: 14px;
+        min-height: 24px;
     }
 
     .company {
@@ -131,5 +132,65 @@
         gap: 16px;
         flex-wrap: wrap;
         margin-left: auto;
+    }
+
+    @media (max-width: 780px) {
+        .card {
+            height: auto;
+            padding: 24px;
+            padding-top: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: relative
+        }
+
+        img {
+            position: absolute;
+            height: 48px;
+            width: 48px;
+            top: -24px;
+            left: 24px;
+            
+        }
+
+        .job-details {
+            margin: 0;
+            min-width: 281px;
+        }
+
+        .company {
+            font-size: 15px;
+            line-height: 11.96px;
+        }
+
+        .position {
+            font-size: 16px;
+        }
+
+        .bottom-row {
+            column-gap: 10px;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.12px;
+            color: #7C8F8F;
+        }
+
+        .filter-chips {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 0;
+            width: 100%;
+        }
+
+        .filter-chips::before {
+            content: '';
+            height: 1px;
+            width: 100%;
+            background: #B7C4C4;
+            margin-top: 16px;
+        }
     }
 </style>
