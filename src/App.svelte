@@ -60,7 +60,7 @@
 	.job-listing-container {
 		display: flex;
 		flex-direction: column;
-		gap: 40px;
+		gap: 24px;
 		margin-bottom: 76px;
 		position: relative;
   	}
@@ -76,6 +76,10 @@
 		
 		main {
 			padding: 0 24px;
+		}
+
+		.job-listing-container {
+			gap: 40px;
 		}
 
 		.filter-off {
