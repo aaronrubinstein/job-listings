@@ -4,7 +4,7 @@ export const jobListings = writable([
     {
         "id": 1,
         "company": "Photosnap",
-        "logo": "/images/photosnap.svg",
+        "logo": "images/photosnap.svg",
         "newJob": true,
         "featured": true,
         "position": "Senior Frontend Developer",
@@ -19,7 +19,7 @@ export const jobListings = writable([
     {
         "id": 2,
         "company": "Manage",
-        "logo": "/images/manage.svg",
+        "logo": "images/manage.svg",
         "newJob": true,
         "featured": true,
         "position": "Fullstack Developer",
@@ -34,7 +34,7 @@ export const jobListings = writable([
     {
         "id": 3,
         "company": "Account",
-        "logo": "/images/account.svg",
+        "logo": "images/account.svg",
         "newJob": true,
         "featured": false,
         "position": "Junior Frontend Developer",
@@ -49,7 +49,7 @@ export const jobListings = writable([
     {
         "id": 4,
         "company": "MyHome",
-        "logo": "/images/myhome.svg",
+        "logo": "images/myhome.svg",
         "newJob": false,
         "featured": false,
         "position": "Junior Frontend Developer",
@@ -64,7 +64,7 @@ export const jobListings = writable([
     {
         "id": 5,
         "company": "Loop Studios",
-        "logo": "/images/loop-studios.svg",
+        "logo": "images/loop-studios.svg",
         "newJob": false,
         "featured": false,
         "position": "Software Engineer",
@@ -79,7 +79,7 @@ export const jobListings = writable([
     {
         "id": 6,
         "company": "FaceIt",
-        "logo": "/images/faceit.svg",
+        "logo": "images/faceit.svg",
         "newJob": false,
         "featured": false,
         "position": "Junior Backend Developer",
@@ -94,7 +94,7 @@ export const jobListings = writable([
     {
         "id": 7,
         "company": "Shortly",
-        "logo": "/images/shortly.svg",
+        "logo": "images/shortly.svg",
         "newJob": false,
         "featured": false,
         "position": "Junior Developer",
@@ -109,7 +109,7 @@ export const jobListings = writable([
     {
         "id": 8,
         "company": "Insure",
-        "logo": "/images/insure.svg",
+        "logo": "images/insure.svg",
         "newJob": false,
         "featured": false,
         "position": "Junior Frontend Developer",
@@ -124,7 +124,7 @@ export const jobListings = writable([
     {
         "id": 9,
         "company": "Eyecam Co.",
-        "logo": "/images/eyecam-co.svg",
+        "logo": "images/eyecam-co.svg",
         "newJob": false,
         "featured": false,
         "position": "Full Stack Engineer",
@@ -139,7 +139,7 @@ export const jobListings = writable([
     {
         "id": 10,
         "company": "The Air Filter Company",
-        "logo": "/images/the-air-filter-company.svg",
+        "logo": "images/the-air-filter-company.svg",
         "newJob": false,
         "featured": false,
         "position": "Front-end Dev",

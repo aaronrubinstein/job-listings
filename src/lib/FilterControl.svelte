@@ -13,7 +13,7 @@
         {value}
     </div>
     <button class="remove-filter" type="button" {value} on:click={removeFilter}>
-        <img src="/images/icon-remove.svg" alt="Remove filter">
+        <img src="images/icon-remove.svg" alt="Remove filter">
     </button>
 </div>
 
